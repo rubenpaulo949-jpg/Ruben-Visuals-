@@ -1,16 +1,23 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <link rel="icon" type="image/png" href="logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ruben Visuals | Criatividade que marca</title>
+    <title>Ruben Visuals</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -19,20 +26,20 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #070707;
+            background: #0b0b0b;
             color: white;
+            line-height: 1.6;
         }
 
         nav {
             position: sticky;
             top: 0;
-            z-index: 10;
-            background: rgba(7,7,7,0.95);
-            border-bottom: 1px solid #222;
-            padding: 18px 25px;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 18px 8%;
+            background: #111;
         }
 
         nav strong {
@@ -40,14 +47,14 @@
         }
 
         nav a {
-            color: #aaa;
+            color: white;
             text-decoration: none;
             margin-left: 20px;
             font-size: 14px;
         }
 
         nav a:hover {
-            color: white;
+            color: #ff7a00;
         }
 
         .hero {
@@ -56,58 +63,54 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 20px;
-            background:
-                radial-gradient(circle at 50% 0%, #303030, #070707 55%);
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #111, #1c1c1c);
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 750px;
         }
 
         .logo {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid white;
-            margin-bottom: 25px;
-            box-shadow: 0 0 40px rgba(255,255,255,0.15);
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 20px;
         }
 
         .label {
-            color: #999;
-            letter-spacing: 4px;
-            font-size: 12px;
+            color: #ff7a00;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
             margin-bottom: 15px;
         }
 
         h1 {
-            font-size: clamp(45px, 11vw, 85px);
-            letter-spacing: -3px;
+            font-size: 55px;
             margin-bottom: 20px;
         }
 
         .hero p {
-            color: #aaa;
-            font-size: 19px;
-            max-width: 650px;
-            margin: auto;
+            color: #ccc;
+            font-size: 18px;
+            margin-bottom: 30px;
         }
 
         .buttons {
-            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 25px;
-            margin: 6px;
+            padding: 14px 24px;
             border-radius: 30px;
             text-decoration: none;
             color: white;
-            border: 1px solid #444;
-            font-weight: bold;
+            border: 1px solid #ff7a00;
             transition: 0.3s;
         }
 
@@ -116,27 +119,23 @@
         }
 
         .primary {
-            background: white;
-            color: black;
-            border: none;
+            background: #ff7a00;
         }
 
         section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 90px 20px;
+            padding: 90px 8%;
         }
 
         .title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .title span {
-            color: #777;
+            color: #ff7a00;
+            font-size: 14px;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 12px;
         }
 
         .title h2 {
@@ -145,108 +144,115 @@
         }
 
         .about {
-            text-align: center;
-            max-width: 750px;
+            max-width: 800px;
             margin: auto;
-            color: #aaa;
-            font-size: 18px;
+            text-align: center;
+            color: #ccc;
+            font-size: 17px;
         }
 
         .services {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 25px;
         }
 
         .card {
-            background: #111;
-            border: 1px solid #252525;
-            border-radius: 20px;
+            background: #151515;
             padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #252525;
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: #555;
+            transform: translateY(-5px);
+            border-color: #ff7a00;
         }
 
         .icon {
-            font-size: 38px;
-            margin-bottom: 20px;
+            font-size: 40px;
+            margin-bottom: 15px;
         }
 
         .card h3 {
             margin-bottom: 12px;
+            font-size: 21px;
         }
 
         .card p {
-            color: #888;
+            color: #aaa;
         }
 
         .portfolio {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
         .portfolio img {
             width: 100%;
-            height: 450px;
+            height: 420px;
             object-fit: cover;
-            border-radius: 20px;
-            border: 1px solid #292929;
-            transition: 0.4s;
-        }
-
-        .portfolio img:hover {
-            transform: scale(1.02);
+            border-radius: 15px;
         }
 
         .contact {
-            background: linear-gradient(145deg, #171717, #0d0d0d);
-            border: 1px solid #292929;
-            border-radius: 30px;
             text-align: center;
-            padding: 60px 25px;
+            max-width: 700px;
+            margin: auto;
         }
 
         .contact p {
-            color: #999;
-            max-width: 600px;
-            margin: 15px auto 25px;
+            color: #ccc;
+            margin-bottom: 30px;
         }
 
         .whatsapp {
             background: #25D366;
-            border: none;
+            border-color: #25D366;
+            margin: 8px;
         }
 
         .instagram {
             background: #E1306C;
-            border: none;
+            border-color: #E1306C;
+            margin: 8px;
+        }
+
+        .topo-btn {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 40px;
+            color: white;
+            text-decoration: none;
+            background: #222;
+            padding: 12px 20px;
+            border-radius: 25px;
         }
 
         footer {
-            border-top: 1px solid #222;
             text-align: center;
-            padding: 35px 20px;
-            color: #666;
+            padding: 25px;
+            background: #111;
+            color: #777;
         }
 
         @media (max-width: 700px) {
 
             nav {
-                padding: 15px;
-            }
-
-            nav strong {
-                font-size: 17px;
+                flex-direction: column;
+                gap: 15px;
             }
 
             nav a {
                 margin-left: 8px;
                 font-size: 12px;
+            }
+
+            h1 {
+                font-size: 40px;
             }
 
             .services {
@@ -299,6 +305,7 @@
             </p>
 
             <div class="buttons">
+
                 <a href="#portfolio" class="btn primary">
                     Ver portfólio
                 </a>
@@ -306,6 +313,7 @@
                 <a href="#contacto" class="btn">
                     Pedir orçamento
                 </a>
+
             </div>
 
         </div>
@@ -331,6 +339,10 @@
     <section id="servicos">
 
         <div class="title">
+            <span>O que fazemos</span>
+            <h2>Serviços</h2>
+        </div>
+
         <div class="services">
 
             <div class="card">
@@ -371,6 +383,7 @@
         <div class="portfolio">
 
             <img src="foto1.png" alt="Trabalho Ruben Visuals">
+
             <img src="foto3.png" alt="Trabalho Ruben Visuals">
 
         </div>
@@ -396,6 +409,12 @@
                 💬 Falar no WhatsApp
             </a>
 
+            <a class="btn whatsapp"
+               href="https://wa.me/244922657208?text=Olá%20Ruben%20Visuals!%20Gostaria%20de%20pedir%20um%20orçamento.%20O%20meu%20projeto%20é:"
+               target="_blank">
+                💰 Pedir orçamento
+            </a>
+
             <a class="btn instagram"
                href="https://www.instagram.com/ruben_visuals.0/"
                target="_blank">
@@ -406,9 +425,25 @@
 
     </section>
 
+    <a href="#" class="topo-btn">⬆️ Voltar ao topo</a>
+
     <footer>
         © 2026 Ruben Visuals — Criatividade que marca.
     </footer>
 
-</body>
+<section id="contacto">
+    <div class="title">
+        <span>Fale connosco</span>
+        <h2>Contacto</h2>
+    </div>
+
+    <p>
+        Tens um projeto ou precisas de um trabalho visual?
+        Fala connosco e vamos transformar a tua ideia em realidade.
+    </p>
+
+    <a href="https://wa.me/244922657208" class="instagram">
+        Pedir orçamento
+    </a>
+</section> </body>
 </html>
