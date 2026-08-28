@@ -323,6 +323,41 @@
         opacity: 0;
         visibility: hidden;
     }
+}.hero h1 {
+    animation: aparecerTitulo 1s ease 0.3s both;
+}
+
+.hero .label {
+    animation: aparecerTitulo 1s ease 0.5s both;
+}
+
+.hero p {
+    animation: aparecerTitulo 1s ease 0.7s both;
+}
+
+.hero .buttons {
+    animation: aparecerTitulo 1s ease 0.9s both;
+}
+
+@keyframes aparecerTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.15);
 } </style>
 </head>
 
