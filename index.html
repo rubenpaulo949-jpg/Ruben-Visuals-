@@ -271,10 +271,70 @@
                 padding: 65px 18px;
             }
         }
-    </style>
+   #loading {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: desaparecer 1s ease 2s forwards;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-content img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.loading-content h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.loading-content p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.loader {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #333;
+    border-top: 3px solid white;
+    border-radius: 50%;
+    margin: 25px auto 0;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes desaparecer {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+} </style>
 </head>
 
 <body>
+<div id="loading">
+    <div class="loading-content">
+        <img src="logo.png" alt="Ruben Visuals">
+        <h2>Ruben Visuals</h2>
+        <p>DESIGN • FOTOGRAFIA • REDES SOCIAIS</p>
+        <div class="loader"></div>
+    </div>
+</div>
 
     <nav>
         <strong>Ruben Visuals</strong>
